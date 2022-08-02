@@ -109,9 +109,9 @@ const countries = useSelector((state) => state.countries)
         <button>Volver al Home!</button>
       </Link>
 
-      
+      <h1 className={s.title}>Vamos a crear nuestra actividad!</h1>
         <div className={s.otroDiv}>
-          <h1 className={s.title}>Vamos a crear nuestra actividad!</h1>
+          
           <form  className={s.conteiner} onSubmit={e => handleSubmit(e)}>
 
       <div>
@@ -124,7 +124,7 @@ const countries = useSelector((state) => state.countries)
 
       <div>
       {/* <label>Dificultad: </label> */}
-          <select  name="difficulty" value={input.difficulty} onChange={e => {handleChange(e)}}> 
+          <select className={s.select} name="difficulty" value={input.difficulty} onChange={e => {handleChange(e)}}> 
           <option hidden>Dificultad del 1 al 5</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -136,7 +136,7 @@ const countries = useSelector((state) => state.countries)
 
      <div>
         {/* <label>Duracion: </label> */}
-         <input type='number' value={input.duration} placeholder='Duracion en minutos' name='duration' onChange={e => {handleChange(e)}}></input>
+         <input  type='number' value={input.duration} placeholder='Duracion en minutos' name='duration' onChange={e => {handleChange(e)}}></input>
          {errors.duration && (
         <p className='error' >{errors.duration}</p>
       )}
@@ -144,7 +144,7 @@ const countries = useSelector((state) => state.countries)
 
       <div>
           {/* <label>Temporadas: </label> */}
-          <select   name="season" value={input.season} onChange={e => {handleChange(e)}}>
+          <select  className={s.select} name="season" value={input.season} onChange={e => {handleChange(e)}}>
             
           <option hidden  >Temporadas</option>
             <option value="Winter">Invierno</option>
@@ -156,7 +156,7 @@ const countries = useSelector((state) => state.countries)
 
       <div>
             {/* <label>Paises: </label> */}
-            <select  onChange={e => {handleSelect(e)}}>
+            <select  className={s.select} onChange={e => {handleSelect(e)}}>
                <option hidden>Paises</option>     
                 {
                     countries?.map(c =>{

@@ -19,5 +19,9 @@
 }
 .title {
     color: white;
-    margin-right: 250px;
+    margin-left:270px;
+}
+.select {
+    border: 3px solid rgb(49, 58, 105);
+    border-radius: 50px;
 }
