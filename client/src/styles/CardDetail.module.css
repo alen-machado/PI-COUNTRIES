@@ -1,25 +1,25 @@
 .conteiner{
-   color: black;
-   text-align: center;
-   border: 10px solid white;
-   margin: 30px 200px 30px 500px;
-   background-color: gainsboro;
-   border-radius: 15px;
-   box-shadow: 10px 10px 10px white;
-    
+  color: black;
+  text-align: center;
+  border: 10px solid white;
+  margin: 30px 400px 30px 400px;
+  background-color: gainsboro;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px white;
+   
 }
 .img {
-  border: 10px solid black;
-  border-radius: 15px;
+ border: 10px solid black;
+ border-radius: 15px;
 }
 
 .actividades {
-  border: 10px solid white;;
-  border-radius: 15px;
-  box-shadow: 10px 10px 10px 10px rgb(150, 142, 142);
-  margin: 5px 200px 5px 200px;
+ border: 10px solid white;;
+ border-radius: 15px;
+ box-shadow: 10px 10px 10px 10px rgb(150, 142, 142);
+ margin: 5px 200px 5px 200px;
 }
 
 .actBtn {
-  border-radius: 100px;
+ border-radius: 100px;
 }
