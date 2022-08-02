@@ -1,9 +1,8 @@
 .div {
-    color: black;
-  text-align: center;
-  border: 10px solid white;
-  margin: 30px 400px 30px 400px;
-  background-color: gainsboro;
-  border-radius: 15px;
-  box-shadow: 10px 10px 10px white;
+   justify-content: center;
+}
+.btn {
+    border: 10px solid white;;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px 10px rgb(150, 142, 142);
 }

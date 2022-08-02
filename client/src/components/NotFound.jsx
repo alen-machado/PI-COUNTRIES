@@ -6,9 +6,9 @@ export default function NotFound() {
   return (
     <div className={s.div}>
       <Link to='/home'>
-        <button>Volver al Home!</button>
+        <button className={s.btn}>Volver al Home!</button>
       </Link>
-      
+
       <h1>La pagina que usted esta buscando no existe</h1>
 
     </div>
