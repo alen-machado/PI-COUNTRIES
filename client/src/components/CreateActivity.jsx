@@ -109,9 +109,10 @@ const countries = useSelector((state) => state.countries)
         <button>Volver al Home!</button>
       </Link>
 
-      <h1>Vamos a crear nuestra actividad!</h1>
-
-      <form  className={s.conteiner} onSubmit={e => handleSubmit(e)}>
+      
+        <div className={s.otroDiv}>
+          <h1 className={s.title}>Vamos a crear nuestra actividad!</h1>
+          <form  className={s.conteiner} onSubmit={e => handleSubmit(e)}>
 
       <div>
       
@@ -192,6 +193,8 @@ const countries = useSelector((state) => state.countries)
         <button type='submit' >Crear actividad</button>
 
       </form>
+        </div>
+      
  
       
 

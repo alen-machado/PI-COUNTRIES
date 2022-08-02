@@ -1,14 +1,21 @@
 .conteiner{
-    /* background-color: gainsboro;
-    margin: 5px;
-    padding: 10px;
-    width: 370px;
-    height: 550px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; */
-    background-color: black;
-  color: white;
+   color: black;
+   text-align: center;
+   border: 10px solid white;
+   margin: 30px 80px 30px 80px;
+   background-color: gainsboro;
+   border-radius: 15px;
+   box-shadow: 10px 10px 10px white;
+    
+}
+.img {
+  border: 10px solid black;
+  border-radius: 15px;
+}
+
+.actividades {
+  border: 5px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+  margin: 0px 100px 0px 100px;
 }

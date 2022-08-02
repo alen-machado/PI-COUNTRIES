@@ -1,7 +1,8 @@
 import React from 'react'
 import { useEffect, useState} from 'react'
 import { useDispatch, useSelector} from "react-redux"
-import { Link } from "react-router-dom"
+
+import s from '../styles/Home.module.css'
 
 import  Card  from "./Card"
 import NavBar from './NavBar'
@@ -54,8 +55,8 @@ export default function HomePage() {
       paginado={paginado}
       />
 
-      <div>
-      {
+      <div className={s.container2}>
+      { 
           currentCounts?.map( e => {
             
             return (

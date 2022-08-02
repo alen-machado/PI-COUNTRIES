@@ -33,9 +33,9 @@ export default function CardDetail() {
   }
   
   return (
-    <div key={id} className={s.conteiner}>
+    <div key={id} >
 
-         <div>
+             <div>
 
             <Link to='/create'>
               <button>Crear Actividad</button>
@@ -47,17 +47,17 @@ export default function CardDetail() {
 
          <button onClick={e => {handleClick(e)}}>Volver a cargar</button>
 
-         </div>
-
-         <div>
-          {
+             </div>
+            
+           <div className={s.conteiner}>
+           {
             
             country.length > 0 ? 
             
             <div>
               <h1 >{country[0].name}</h1>
                <h2 >Codigo: {country[0].id}</h2>
-              <img  src={country[0].image? country[0].image : "https://www.elsoldemexico.com.mx/doble-via/zcq7d4-perro.jpg/alternates/LANDSCAPE_768/perro.jpg"} alt="img not found" width="350px" height="300px"/>
+              <img className={s.img} src={country[0].image? country[0].image : "https://www.elsoldemexico.com.mx/doble-via/zcq7d4-perro.jpg/alternates/LANDSCAPE_768/perro.jpg"} alt="img not found" width="350px" height="300px"/>
              <h3 >Continente: {country[0].continents} </h3>
               <h3  >Capital: {country[0].capital} </h3>
               <h3  >Subregion: {country[0].subregion} </h3>
@@ -65,10 +65,10 @@ export default function CardDetail() {
               <h3  >Poblacion: {country[0].population} personas</h3>
 
               
-              <div> 
-              <h4>Actividades:</h4>
+                 <div className={s.actividades}> 
+                      <h4>Actividades:</h4>
               
-                {
+                     {
                  
                     country[0].activities.length === 0?
                     <p> No hay actividades agregadas aún </p> :
@@ -83,10 +83,10 @@ export default function CardDetail() {
 
                         </div> 
                       )
-                    })
-                }
+                     })
+                  }
 
-              </div>
+               </div>
               
               
                 
