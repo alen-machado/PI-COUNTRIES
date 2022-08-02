@@ -2,7 +2,7 @@
    color: black;
    text-align: center;
    border: 10px solid white;
-   margin: 30px 80px 30px 80px;
+   margin: 30px 500px 30px 500px;
    background-color: gainsboro;
    border-radius: 15px;
    box-shadow: 10px 10px 10px white;
@@ -14,8 +14,12 @@
 }
 
 .actividades {
-  border: 5px solid black;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px black;
-  margin: 0px 100px 0px 100px;
+  border: 10px solid white;;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px 10px rgb(150, 142, 142);
+  margin: 5px 200px 5px 200px;
+}
+
+.actBtn {
+  border-radius: 100px;
 }

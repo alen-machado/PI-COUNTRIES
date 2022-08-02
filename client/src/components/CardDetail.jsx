@@ -75,7 +75,7 @@ export default function CardDetail() {
                     country[0].activities.map(e => {
                       return (
                         <div key={e.id}>
-                          <button  name={e.id} value={e.id} onClick={(e) => { handleDelete(e) }}>❌</button>
+                          <button className={s.actBtn} name={e.id} value={e.id} onClick={(e) => { handleDelete(e) }}>❌</button>
                           <p>{mayus(e.name)}</p>
                           <p>Dificultad: {e.difficulty} / 5</p>
                           <p>Duracion: {e.duration} minutos</p>
