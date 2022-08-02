@@ -1,6 +1,6 @@
 const { Country } = require('../../db')
 
-const GetContinents = async (req, res, next) => {
+const getContinents = async (req, res, next) => {
 
     const search = await Country.findAll({
         attributes: ['continents']
@@ -16,4 +16,4 @@ const GetContinents = async (req, res, next) => {
         next(error)
     }
 }
-module.exports = {GetContinents}
+module.exports = {getContinents}

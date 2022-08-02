@@ -1,4 +1,4 @@
-const { GetApiInfo } = require('./GetApiInfo')
+const { getApiInfo } = require('./getApiInfo')
 
 
 const getIdCountry = async (req, res, next) => {
@@ -8,7 +8,7 @@ const getIdCountry = async (req, res, next) => {
     //      where: {code: id}, 
     //      include: Activity
     //  })
-    const country = await GetApiInfo()
+    const country = await getApiInfo()
 
     const countryId = country.filter(e => e.id == id)
 

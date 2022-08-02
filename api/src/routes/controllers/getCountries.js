@@ -1,10 +1,10 @@
-const {GetApiInfo} = require('./GetApiInfo')
+const {getApiInfo} = require('./getApiInfo')
 
-const GetCountries = async (req, res, next) => {
+const getCountries = async (req, res, next) => {
     try {
         const {name} = req.query 
 
-        const infoBD = await GetApiInfo()
+        const infoBD = await getApiInfo()
 
         if(name){
            const countryFind = infoBD.filter(e => e.name.toLowerCase()?.includes(name.toLowerCase()))
@@ -24,4 +24,4 @@ const GetCountries = async (req, res, next) => {
     }
 }
 
-module.exports = {GetCountries}
+module.exports = {getCountries}

@@ -3,7 +3,7 @@ const axios = require ('axios')
 const {Country} = require('../../db')
 const {Activity} = require('../../db')
 
-const GetApiInfo = async () => {
+const getApiInfo = async () => {
     try {
         const apiUrl = await axios.get('https://restcountries.com/v3/all')
         const apiInfo = apiUrl.data?.map(e => { 
@@ -41,4 +41,4 @@ const GetApiInfo = async () => {
     }
 } 
 
-module.exports = {GetApiInfo}
+module.exports = {getApiInfo}

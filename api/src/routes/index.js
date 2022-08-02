@@ -7,11 +7,11 @@ const { Router } = require('express');
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
 
-const {GetCountries} = require('./controllers/getCountries');
+const {getCountries} = require('./controllers/getCountries');
 const {getIdCountry} = require('./controllers/getIdCountry')
 const {postActivity} = require('./controllers/postActivity')
-const {GetContinents} = require('./controllers/GetContinents')
-const {GetActivities} = require('./controllers/GetActivities')
+const {getContinents} = require('./controllers/getContinents')
+const {getActivities} = require('./controllers/getActivities')
 const {deleteAct} = require('./controllers/deleteAct')
 
 
@@ -23,11 +23,11 @@ const router = Router();
 
 //router.use('/countries', countries);
 //router.use('/activities', activities);
-router.get('/countries', GetCountries)
+router.get('/countries', getCountries)
 router.get('/countries/:id', getIdCountry) 
 router.post('/activities', postActivity)
-router.get('/continents', GetContinents)
-router.get('/activities', GetActivities)
+router.get('/continents', getContinents)
+router.get('/activities', getActivities)
 router.delete('/activities/:id', deleteAct)
 
 
