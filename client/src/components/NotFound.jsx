@@ -8,7 +8,8 @@ export default function NotFound() {
       <Link to='/home'>
         <button>Volver al Home!</button>
       </Link>
-
+      
+      <h1>La pagina que usted esta buscando no existe</h1>
 
     </div>
   )

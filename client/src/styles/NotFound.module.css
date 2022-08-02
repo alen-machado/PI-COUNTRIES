@@ -1,3 +1,9 @@
 .div {
-    background: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/552c6661546639.5a71f19a4a613.png');
+    color: black;
+  text-align: center;
+  border: 10px solid white;
+  margin: 30px 400px 30px 400px;
+  background-color: gainsboro;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px white;
 }
