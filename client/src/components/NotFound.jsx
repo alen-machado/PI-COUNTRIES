@@ -9,7 +9,7 @@ export default function NotFound() {
         <button className={s.btn}>Volver al Home!</button>
       </Link>
 
-      <h1>La pagina que usted esta buscando no existe</h1>
+      <h1 className={s.title}>La pagina que usted esta buscando no existe</h1>
 
     </div>
   )
