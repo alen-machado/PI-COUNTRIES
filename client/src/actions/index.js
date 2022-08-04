@@ -100,6 +100,27 @@ export function deleteAct(id){
 }
 
 
+export function deleteCount(id){
+    return async function (dispatch){
+        
+            let json = await axios.delete('/countries/' + id)
+             
+            return dispatch({
+                type: 'DELETE_COUNTRY',
+                payload: json.data
+            })
+
+    }
+}
+
+export function cleanCountryId(){
+    return {
+        type: 'CLEAN_COUNTRY_ID'
+    }
+}
+
+
+
 
 // -------ORDENAMIENTOS-------
 

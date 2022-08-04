@@ -13,6 +13,8 @@ const {postActivity} = require('./controllers/postActivity')
 const {getContinents} = require('./controllers/getContinents')
 const {getActivities} = require('./controllers/getActivities')
 const {deleteAct} = require('./controllers/deleteAct')
+const {deleteCount} = require('./controllers/deleteCount')
+
 
 
 
@@ -29,6 +31,7 @@ router.post('/activities', postActivity)
 router.get('/continents', getContinents)
 router.get('/activities', getActivities)
 router.delete('/activities/:id', deleteAct)
+router.delete('/countries/:id', deleteCount)
 
 
 

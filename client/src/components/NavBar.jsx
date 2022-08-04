@@ -35,7 +35,7 @@ export default function NavBar({setCurrentPage, setOrder, name, setName}){
   const continents = useSelector((state) => state.continents)
 
      useEffect(() => {
-         dispatch(getCountries())  //mapsispatchtoprop de la action
+         dispatch(getCountries())  
          dispatch(getContinents())
          dispatch(getActivities())
        }, [dispatch] )

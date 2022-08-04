@@ -1,9 +1,9 @@
 .conteiner{
-  color: black;
+  color: white;
   text-align: center;
   border: 10px solid white;
   margin: 30px 400px 30px 400px;
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
   border-radius: 15px;
   box-shadow: 10px 10px 10px white;
    
@@ -22,4 +22,9 @@
 
 .actBtn {
  border-radius: 100px;
+ cursor: pointer;
+}
+
+.title {
+  text-decoration: underline white;
 }

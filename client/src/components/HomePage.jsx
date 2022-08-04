@@ -20,11 +20,11 @@ export default function HomePage() {
   
 
   useEffect(() => {
-    dispatch(getCountries())  //mapsispatchtoprop de la action
+    dispatch(getCountries())  
   }, [dispatch] )
 
   //-------PAGINADO-------
-  const [ currentPage, setCurrentPage ] = useState(1) //mi pagina actual que arranca en 1
+  const [ currentPage, setCurrentPage ] = useState(1) 
   const [ countPerPage, setCountsPerPage ] = useState(10)
 
   const [order, setOrder] = useState("")
@@ -34,9 +34,7 @@ export default function HomePage() {
   const indexOfFirstCount = indexOfLastCount - countPerPage
   const currentCounts = allCountries.slice(indexOfFirstCount, indexOfLastCount)
 
-  const paginado = (pageNumber) => {//le paso el numero de la pagina y le seteo la pagina en es enumero de pagina
-    setCurrentPage(pageNumber)
-   } 
+  
 
 
   return (
@@ -51,8 +49,8 @@ export default function HomePage() {
 
       <Paginado 
       countPerPage={countPerPage}
-      allCountries={allCountries.length} //props que necesita el componente para funcionar
-      paginado={paginado}
+      allCountries={allCountries.length}  
+      setCurrentPage={setCurrentPage}
       />
 
       <div className={s.container2}>

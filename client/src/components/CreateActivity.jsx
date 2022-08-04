@@ -39,11 +39,6 @@ export default function CreateActivity() {
   const dispatch = useDispatch()
 
   
-
-  // const [name, setName] = useState("")
-  // const [season, setSeason] = useState("")
-  // const [duration, setDuration] = useState("")
-  // const [dificculty, setDifficulty] = useState("")
   const [errors, setErrors] = useState({})
 
   useEffect(()=>{
@@ -123,7 +118,7 @@ const countries = useSelector((state) => state.countries)
       </div>
 
       <div>
-      {/* <label>Dificultad: </label> */}
+      
           <select className={s.select} name="difficulty" value={input.difficulty} onChange={e => {handleChange(e)}}> 
           <option hidden>Dificultad del 1 al 5</option>
             <option value="1">1</option>
@@ -135,7 +130,7 @@ const countries = useSelector((state) => state.countries)
      </div>
 
      <div>
-        {/* <label>Duracion: </label> */}
+        
          <input  type='number' value={input.duration} placeholder='Duracion en minutos' name='duration' onChange={e => {handleChange(e)}}></input>
          {errors.duration && (
         <p className='error' >{errors.duration}</p>
@@ -143,7 +138,7 @@ const countries = useSelector((state) => state.countries)
         </div>
 
       <div>
-          {/* <label>Temporadas: </label> */}
+         
           <select  className={s.select} name="season" value={input.season} onChange={e => {handleChange(e)}}>
             
           <option hidden  >Temporadas</option>
@@ -155,7 +150,7 @@ const countries = useSelector((state) => state.countries)
       </div>
 
       <div>
-            {/* <label>Paises: </label> */}
+            
             <select  className={s.select} onChange={e => {handleSelect(e)}}>
                <option hidden>Paises</option>     
                 {

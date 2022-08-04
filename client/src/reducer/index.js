@@ -3,7 +3,8 @@ const initialState = {
     allCountries: [],
     detail: [],
     continents: [],
-    activities: []
+    activities: [],
+    countryById: {}
 }
 
 export default function rootReducer(state = initialState, action) {
@@ -108,7 +109,18 @@ export default function rootReducer(state = initialState, action) {
                     ...state,
                     activities: state.activities.filter( e=> e.id !== action.payload )
                 }
-                
+            
+            case 'DELETE_COUNTRY': 
+                return{
+                    ...state,
+                    activities: state.activities.filter( e=> e.id !== action.payload )
+                }
+
+            case 'CLEAN_COUNTRY_ID':
+                return{
+                    ...state,
+                    detail: []
+                }    
             default:
           return { ...state}
     }

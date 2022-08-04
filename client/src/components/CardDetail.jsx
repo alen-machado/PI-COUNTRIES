@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { getCountries, getDetail, deleteAct } from '../actions/index'
+import { getCountries, getDetail, deleteAct, cleanCountryId } from '../actions/index'
 import { useEffect } from 'react'
 import s from '../styles/CardDetail.module.css'
 
@@ -14,11 +14,11 @@ export default function CardDetail() {
 
   useEffect(() => {
     dispatch(getDetail(id))
-    
+    dispatch(cleanCountryId())
   },[dispatch, id])
 
   function handleDelete(e){
-   e.preventDefault()
+    e.preventDefault()
     dispatch(deleteAct(e.target.name))
     dispatch(getDetail(id))
   }
@@ -55,14 +55,14 @@ export default function CardDetail() {
             country.length > 0 ? 
             
             <div>
-              <h1 >{country[0].name}</h1>
+              <h1 className={s.title}>{country[0].name}</h1>
                <h2 >Codigo: {country[0].id}</h2>
               <img className={s.img} src={country[0].image? country[0].image : "https://www.elsoldemexico.com.mx/doble-via/zcq7d4-perro.jpg/alternates/LANDSCAPE_768/perro.jpg"} alt="img not found" width="350px" height="300px"/>
              <h3 >Continente: {country[0].continents} </h3>
               <h3  >Capital: {country[0].capital} </h3>
               <h3  >Subregion: {country[0].subregion} </h3>
               <h3  >Area: {country[0].area} km2 </h3>
-              <h3  >Poblacion: {country[0].population} personas</h3>
+              <h3  >Poblacion: {country[0].population} Habitantes</h3>
 
               
                  <div className={s.actividades}> 
