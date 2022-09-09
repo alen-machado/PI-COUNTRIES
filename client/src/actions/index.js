@@ -38,18 +38,18 @@ export function getDetail(id){
     }
 }
 
-export function getContinents(){
-    return async function(dispatch){
+ export function getContinents(){
+     return async function(dispatch){
 
-        const json = await axios.get('/continents')
+         const json = await axios.get('/continents')
 
-        return dispatch({
-            type: 'GET_CONTINENTS',
-            payload: json.data
-        })
-    }
-}
-
+         return dispatch({
+             type: 'GET_CONTINENTS',
+             payload: json.data
+         })
+     }
+ }
+  
 export function filterContinents(payload){
     return {
         type: 'FILTER_CONTINENTS',

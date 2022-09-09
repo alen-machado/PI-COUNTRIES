@@ -76,8 +76,14 @@ const countries = useSelector((state) => state.countries)
 
     function handleSubmit(e){
       e.preventDefault()
-      dispatch(postActivity(input))
-      alert('Actividad Creada')
+      if(!errors){
+        dispatch(postActivity(input))
+        alert('Actividad Creada')
+      } else {
+        alert('primero debes llenar todo el formulario')
+      }
+      
+      
       setInput({
         name:'',
         difficulty: '',
@@ -97,7 +103,7 @@ const countries = useSelector((state) => state.countries)
         ),
       });}
  
-
+   
   return (
     <div>
       <Link to='/home'>
@@ -185,7 +191,7 @@ const countries = useSelector((state) => state.countries)
             </ul>
         </div>
 
-        <button type='submit' >Crear actividad</button>
+        <button type='submit' onClick={e => handleSubmit(e)} >Crear actividad</button>
 
       </form>
         </div>

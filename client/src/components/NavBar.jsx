@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect, useState} from 'react'
+import { useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from "react-router-dom"
 import s from '../styles/NavBar.module.css'
@@ -73,6 +73,8 @@ export default function NavBar({setCurrentPage, setOrder, name, setName}){
       setOrder(e.target.value)
     }
 
+    
+
    
     return(
         <div >
@@ -105,8 +107,6 @@ export default function NavBar({setCurrentPage, setOrder, name, setName}){
             onClick={e => {handleSubmit(e)}}
             >Buscar</button>
         </div>
-
-        
 
         <div className={s.text}>
             <label>Ordenado Alfabetico:</label>

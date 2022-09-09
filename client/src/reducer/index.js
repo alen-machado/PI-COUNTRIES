@@ -36,8 +36,6 @@ export default function rootReducer(state = initialState, action) {
         case 'FILTER_CONTINENTS':
         const copy = state.allCountries;
         const result = action.payload === 'All' ? copy : copy.filter((e) => e.continents === action.payload);
-  
-    
             return {
                 ...state, 
                 countries: result
@@ -48,6 +46,8 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 activities: action.payload
             } 
+        
+              
 
         case 'FILTER_ACTIVITIES':
             const copy2 = state.allCountries;

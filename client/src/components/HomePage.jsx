@@ -8,7 +8,7 @@ import  Card  from "./Card"
 import NavBar from './NavBar'
 import Paginado from './Paginado'
 
-import { getCountries } from '../actions/index'
+import { getCountries, handleMenor } from '../actions/index'
 
 export default function HomePage() {
   
@@ -53,9 +53,11 @@ export default function HomePage() {
       setCurrentPage={setCurrentPage}
       />
 
+      
+
       <div className={s.container2}>
       { 
-          currentCounts?.map( e => {
+          currentCounts.length ? currentCounts.map( e => {
             
             return (
               <div key={e.id} >
@@ -65,10 +67,10 @@ export default function HomePage() {
                 
                  
               </div>
-            )
+            ) 
           }
            
-          )
+          ): <div className={s.loading} >Loading</div>
         }
       </div>
 
