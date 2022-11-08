@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import s from '../styles/CreateAct.module.css'
 import { getCountries, postActivity } from '../actions/index'
+import {MdArrowBack} from 'react-icons/md'
 
 
 function validate(input){
@@ -107,19 +108,23 @@ const countries = useSelector((state) => state.countries)
   return (
     <div>
       <Link to='/home'>
-        <button>Volver al Home!</button>
+        <button className={s.flechaBack}><MdArrowBack/></button>
       </Link>
 
-      <h1 className={s.title}>Vamos a crear nuestra actividad!</h1>
+    <div className={s.todo}>
+      
+
+     
         <div className={s.otroDiv}>
+       
           
           <form  className={s.conteiner} onSubmit={e => handleSubmit(e)}>
-
+          <h1 className={s.title}>Vamos a crear nuestra actividad!</h1>
       <div>
       
       <input  name="name" value={input.name} autoComplete="off" placeholder="Nombre de la Actividad..." onChange={e => {handleChange(e)}}/>
       {errors.name && (
-        <p className='error' >{errors.name}</p>
+        <p className={s.errors} >{errors.name}</p>
       )}
       </div>
 
@@ -139,7 +144,7 @@ const countries = useSelector((state) => state.countries)
         
          <input  type='number' value={input.duration} placeholder='Duracion en minutos' name='duration' onChange={e => {handleChange(e)}}></input>
          {errors.duration && (
-        <p className='error' >{errors.duration}</p>
+        <p className={s.errors} >{errors.duration}</p>
       )}
         </div>
 
@@ -181,7 +186,7 @@ const countries = useSelector((state) => state.countries)
                    
                     return ( 
                     <div key={el} >
-                        <span  className="lista">{name}</span>
+                        <span  className={s.errors}>{name}</span>
                         <button  name={el}className="closeButton" onClick={(e) => { removeCountry(e) }}>❌</button> 
                     </div>
                 )
@@ -191,7 +196,9 @@ const countries = useSelector((state) => state.countries)
             </ul>
         </div>
 
-        <button type='submit' onClick={e => handleSubmit(e)} >Crear actividad</button>
+        <button type='submit' onClick={e => handleSubmit(e)}
+        className={s.buttonSubmit}
+        >Crear actividad</button>
 
       </form>
         </div>
@@ -199,6 +206,7 @@ const countries = useSelector((state) => state.countries)
  
       
 
+    </div>
     </div>
   )
 }

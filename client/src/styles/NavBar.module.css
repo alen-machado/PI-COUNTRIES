@@ -1,11 +1,72 @@
 .title {
-    font: bold 7.5vw/1.6 "Acme", sans-serif;
-    color: grey;
     font-size: 20px;
-    letter-spacing: 5px;
-    text-shadow: -1px -1px 0px grey;
+    font-weight: 100;
+    
+    color: white;
+    
+    font-family: 'Comfortaa', cursive;
+    width: 30%;
+    margin-left: 2rem;
+
   }
 
+  .header {
+    display:flex;
+   
+   flex-direction: row;
+  
+  }
+
+  .filtros {
+  display:flex;
+   padding: 2rem 0rem;
+    justify-content: center;
+  }
+  .filtros_item{
+   display: flex;
+   margin: 0 1rem;
+   flex-direction: column;
+  }
+  .filtros_item label{
+  
+  margin-bottom: 1rem;
+   }
+   .filtros_item select{
+    background-color: transparent;
+    color: white;
+    padding:0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+     }
+
+     .filtros_item option{
+   color:rgb(255, 255, 255);
+   background-color: black;
+       }
+
+  .search {
+    
+    display:flex;
+    align-items: center;
+    width: 40%;
+    justify-content: center;
+   
+  }
+
+  .search input{
+    padding: 1rem;
+    background-color:rgba(0, 0, 0, 0.708);
+    border-radius: 2rem;
+    width: 60% ;
+    color:white;
+  }
+
+.conteiner {
+ background-color: rgba(2, 2, 2, 0.653);
+  color: white;
+    
+  font-family: 'Comfortaa', cursive;
+}
   .text {
     background-color: gainsboro;
     height: 1000%;
@@ -15,9 +76,54 @@
     justify-content: space-around;
     align-items: center;
     justify-items: center;
+
     
   }
   .text:hover {
     transform: scale(1.1);
     cursor: pointer;
+  }
+
+  .crear_button{
+  
+    border:none;
+    padding: 1rem;
+   
+  font-size: 1.8rem;
+    background-color: transparent;
+    color:white;
+    cursor:pointer;
+    transition: 0.3s;
+    
+  }
+  .crear_button:hover{
+  
+    border:none;
+    padding: 1rem;
+    background-color: transparent;
+    color:white;
+    cursor:pointer;
+    transition: 0.3s;
+    transform:scale(1.1);
+  }
+
+  .crear_button_box{
+    
+    display: flex;
+    align-items: center;
+    flex-direction:row-reverse;
+    width: 25%;
+   
+ 
+  }
+
+  .search_button{
+    margin-left: -3rem;
+    height: 2.7rem;
+    width: 2.7rem;
+    background-color: transparent;
+    border-radius: 9999px;
+    color:white;
+    cursor:pointer;
+
   }

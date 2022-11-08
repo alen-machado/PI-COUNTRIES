@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { getCountries, getDetail, deleteAct, cleanCountryId } from '../actions/index'
 import { useEffect } from 'react'
 import s from '../styles/CardDetail.module.css'
+import {MdArrowBack} from 'react-icons/md'
 
 export default function CardDetail() {
   const { id } = useParams();
@@ -33,19 +34,20 @@ export default function CardDetail() {
   }
   
   return (
-    <div key={id} >
+    <div key={id}>
 
-             <div>
+             <div className={s.header}>
+
+             <Link to={'/home'}>
+               <button className={s.flechaBack}><MdArrowBack/></button>
+            </Link>
+
 
             <Link to='/create'>
-              <button>Crear Actividad</button>
+              <button className={s.crearAct}>Crear Actividad</button>
             </Link>
 
-            <Link to={'/home'}>
-                <button>Home</button>
-            </Link>
-
-         <button onClick={e => {handleClick(e)}}>Volver a cargar</button>
+           
 
              </div>
             

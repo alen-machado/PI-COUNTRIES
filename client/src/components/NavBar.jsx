@@ -3,6 +3,7 @@ import { useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from "react-router-dom"
 import s from '../styles/NavBar.module.css'
+import {TfiSearch} from 'react-icons/tfi'
 
 import { getCountries, orderByLeter, getByName, orderByPopu, getContinents, filterContinents, filterActivities, getActivities } from '../actions/index'
 
@@ -40,11 +41,6 @@ export default function NavBar({setCurrentPage, setOrder, name, setName}){
          dispatch(getActivities())
        }, [dispatch] )
 
-    
-      function handleClick(e) {
-        e.preventDefault()
-        dispatch(getCountries())
-      }
 
       function handleOrderLeter(e) {
         e.preventDefault()
@@ -77,38 +73,41 @@ export default function NavBar({setCurrentPage, setOrder, name, setName}){
 
    
     return(
-        <div >
+        <div className={s.conteiner}>
 
-        <div className={s.title}>
-          <h1>El Mundo en tus manos</h1>
-        </div>
+          <div className={s.header}>
 
-        <div>
-            <Link to='/create'>
-            <button>Crear Actividad</button>
-            </Link>
+            <div className={s.title}>
+               <h1>El Mundo en tus manos</h1>
+             </div>
 
-            <Link to={'/home'}>
-            <button>Home</button>
-            </Link>
-            
-            <button onClick={e => {handleClick(e)}}>Volver a cargar</button>
-        </div>
-
-        <div className={s.text}>
-            <input type='text'
+        <div className={s.search}>
+           <input type='text'
             value={name}
             placeholder={'Buscar por nombre...'}
             onChange={e => { handleInput(e)}}
             ></input>
 
             <button
+            className={s.search_button}
             type='submit'
             onClick={e => {handleSubmit(e)}}
-            >Buscar</button>
+            ><TfiSearch/></button>
         </div>
 
-        <div className={s.text}>
+            <div className={s.crear_button_box}>
+            <Link to='/create'>
+
+            <button className={s.crear_button}>Crear Actividad</button>
+            </Link>
+            </div>
+
+        </div>
+
+        
+
+        <div className={s.filtros}>
+          <div className={s.filtros_item}>
             <label>Ordenado Alfabetico:</label>
             <select onChange={e => {handleOrderLeter(e)}} > 
             <option value="Todos">Todos</option>
@@ -117,7 +116,7 @@ export default function NavBar({setCurrentPage, setOrder, name, setName}){
             </select>
         </div>
 
-        <div className={s.text}>
+        <div className={s.filtros_item}>
             <label>Ordenado por Poblacion:</label>
             <select onChange={e => {handleOrderPopu(e)}} > 
             <option value="Todos">Todos</option>
@@ -128,7 +127,7 @@ export default function NavBar({setCurrentPage, setOrder, name, setName}){
 
       
 
-         <div className={s.text}>
+         <div className={s.filtros_item}>
             <label>Ordenado por su Continente:</label>
 
           <select onChange={e => { handleFilterCont(e)}}>
@@ -145,7 +144,7 @@ export default function NavBar({setCurrentPage, setOrder, name, setName}){
 
             </div> 
 
-            <div className={s.text}>
+            <div className={s.filtros_item}>
             <label>Ordenado por tipo de Actividad: </label>
             <select onChange={e => { handleFilterAct(e) }}>
             <option value='All'>Todos</option>
@@ -155,6 +154,11 @@ export default function NavBar({setCurrentPage, setOrder, name, setName}){
           }
             </select>
         </div> 
+        </div>
+
+        
+
+
         </div>
         
 

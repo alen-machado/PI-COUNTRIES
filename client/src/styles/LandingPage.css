@@ -2,22 +2,87 @@
     text-align: center;
     color: white;
     margin-top: 20%;
+    font-family: 'Comfortaa', cursive;
 }
 
-.botton {
-    width: 120px;
-    height: 100px;
-    background-color: rgb(159, 98, 216);
+.container {
+    display: flex ;
+    
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+.buttonBox {
+ margin: 0 auto;
+ 
+}
+
+.title {
     color: white;
-    border: 5px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 10px 10px rgb(255, 255, 255);
+    font-weight: 100;
+    
+    margin: 0 auto;
+    margin-top: 2%;
+    font-size: 4rem;
+}
+
+.button {
+    padding: 1rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    font-size: 2rem;
     cursor: pointer;
+    margin: 0 auto;
 
 }
 
-.botton:hover {
-    color: rgb(141, 22, 253);
-    background-color: white;
-    box-shadow: 5px 10px 10px rgb(141, 22, 253);
+.button:hover {
+    
+    padding: 1rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    text-shadow: 0rem 0rem 1rem white;
+    cursor: pointer;
+    font-size: 2.5rem;
+    transition: 0.5s;
+    margin: 0 auto;
+    
+}
+.header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 3rem;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+.header button {
+    padding: 1rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    
+
+}
+
+.header button:hover {
+    
+    padding: 1rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    
+    cursor: pointer;
+    font-size: 2rem;
+    transition: 0.5s;
+    
 }

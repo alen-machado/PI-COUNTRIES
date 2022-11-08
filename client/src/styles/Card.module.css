@@ -1,7 +1,7 @@
 .conteiner{
     /* background-color: gainsboro; */
     margin: 5px;
-    padding: 10px;
+    padding: 4rem;
     width: 370px;
     height: 550px;
     border-radius: 12px;
@@ -10,6 +10,15 @@
     text-align: center;
     justify-content: space-between;
     color: aliceblue;
+    transition: 0.3s;
+   
+}
+
+.conteiner:hover{
+    /* background-color: gainsboro; */
+  transform: scale(1.2);
+  transition: 0.3s;
+   
    
 }
 .name {
@@ -39,16 +48,16 @@
 .button {
     border-radius: 100px;
     font-size: medium;
-    box-shadow: 5px 0px 20px 10px rgb(150, 142, 142);
+   
     border: 10px solid white;
     cursor: pointer;
-    
+    transition: 0.3s;
 }
 
 .button:hover {
-    color: rgb(141, 22, 253);
-    background-color: white;
-    box-shadow: 5px 10px 10px rgb(141, 22, 253);
+    cursor: pointer;
+   transform: scale(1.05);
+   transition: 0.3s;
 }
 
 .button2 {
@@ -62,9 +71,3 @@
     
 }
 
-.button2:hover {
-    color: rgb(141, 22, 253);
-    background-color: white;
-    box-shadow: 5px 10px 10px rgb(141, 22, 253);
-    
-}

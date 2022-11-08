@@ -25,7 +25,7 @@ export default function HomePage() {
 
   //-------PAGINADO-------
   const [ currentPage, setCurrentPage ] = useState(1) 
-  const [ countPerPage, setCountsPerPage ] = useState(10)
+  const [ countPerPage, setCountsPerPage ] = useState(6)
 
   const [order, setOrder] = useState("")
   const [name, setName] = useState("")
@@ -47,12 +47,6 @@ export default function HomePage() {
         setName={setName}
         />
 
-      <Paginado 
-      countPerPage={countPerPage}
-      allCountries={allCountries.length}  
-      setCurrentPage={setCurrentPage}
-      />
-
       
 
       <div className={s.container2}>
@@ -63,16 +57,22 @@ export default function HomePage() {
               <div key={e.id} >
                 
                
-                 <Card  id={e.id} image={e.image ? e.image : "https://www.elsoldemexico.com.mx/doble-via/zcq7d4-perro.jpg/alternates/LANDSCAPE_768/perro.jpg"} name={e.name} continents={e.continents} population={e.population}  />
+                 <Card className={s.container2_card} id={e.id} image={e.image ? e.image : "https://www.elsoldemexico.com.mx/doble-via/zcq7d4-perro.jpg/alternates/LANDSCAPE_768/perro.jpg"} name={e.name} continents={e.continents} population={e.population}  />
                 
                  
               </div>
             ) 
           }
            
-          ): <div className={s.loading} >Loading</div>
+          ): <div className={s.loading} >Loading...</div>
         }
       </div>
+
+      <Paginado 
+      countPerPage={countPerPage}
+      allCountries={allCountries.length}  
+      setCurrentPage={setCurrentPage}
+      />
 
     </div>
   )
