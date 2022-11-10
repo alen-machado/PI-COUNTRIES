@@ -77,11 +77,12 @@ const countries = useSelector((state) => state.countries)
 
     function handleSubmit(e){
       e.preventDefault()
-      if(!errors){
+      if(Object.keys(errors).length !== 0){
+          alert('Debes llenar el Formulario primero')
+        
+      } else {
         dispatch(postActivity(input))
         alert('Actividad Creada')
-      } else {
-        alert('primero debes llenar todo el formulario')
       }
       
       
